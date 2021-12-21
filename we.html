@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<link rel="stylesheet" href="style.css" />
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>colour changing</title>
+</head>
+<body>
+   <center> 
+    <h1>colours</h1>
+    <script >
+    var colors = ["red", "blue", "green","purple","pink","yellow","black","skyblue"];
+    var colorIndex = 0;
+    function changeColor() {
+        var col = document.getElementById("body");
+        if( colorIndex >= colors.length ) {
+            colorIndex = 0;
+        }
+        col.style.backgroundColor = colors[colorIndex];
+        colorIndex++;
+    }
+    </script>
+    <body id='body'>
+        <button onclick="changeColor();">Change color</button>   
+    </body>
+</center>
+</html>
